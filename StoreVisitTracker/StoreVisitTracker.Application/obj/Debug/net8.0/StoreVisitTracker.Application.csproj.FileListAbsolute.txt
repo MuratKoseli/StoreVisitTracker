@@ -1,0 +1,15 @@
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\bin\Debug\net8.0\StoreVisitTracker.Application.deps.json
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\bin\Debug\net8.0\StoreVisitTracker.Application.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\bin\Debug\net8.0\StoreVisitTracker.Application.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\bin\Debug\net8.0\StoreVisitTracker.Domain.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\bin\Debug\net8.0\StoreVisitTracker.Domain.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.csproj.AssemblyReference.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.AssemblyInfoInputs.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.AssemblyInfo.cs
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.csproj.CoreCompileInputs.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVis.13E4C0E9.Up2Date
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\refint\StoreVisitTracker.Application.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\StoreVisitTracker.Application.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Application\obj\Debug\net8.0\ref\StoreVisitTracker.Application.dll

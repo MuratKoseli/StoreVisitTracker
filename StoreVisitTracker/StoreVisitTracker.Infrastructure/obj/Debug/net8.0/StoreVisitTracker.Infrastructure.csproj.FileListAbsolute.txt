@@ -1,0 +1,17 @@
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\bin\Debug\net8.0\StoreVisitTracker.Infrastructure.deps.json
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\bin\Debug\net8.0\StoreVisitTracker.Infrastructure.runtimeconfig.json
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\bin\Debug\net8.0\StoreVisitTracker.Infrastructure.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\bin\Debug\net8.0\StoreVisitTracker.Infrastructure.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\bin\Debug\net8.0\StoreVisitTracker.Domain.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\bin\Debug\net8.0\StoreVisitTracker.Domain.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.AssemblyInfo.cs
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVis.6BA81703.Up2Date
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\refint\StoreVisitTracker.Infrastructure.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\StoreVisitTracker.Infrastructure.genruntimeconfig.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Infrastructure\obj\Debug\net8.0\ref\StoreVisitTracker.Infrastructure.dll

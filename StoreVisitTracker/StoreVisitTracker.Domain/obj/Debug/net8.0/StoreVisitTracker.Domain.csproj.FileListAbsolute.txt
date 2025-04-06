@@ -1,0 +1,11 @@
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\bin\Debug\net8.0\StoreVisitTracker.Domain.deps.json
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\bin\Debug\net8.0\StoreVisitTracker.Domain.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\bin\Debug\net8.0\StoreVisitTracker.Domain.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\StoreVisitTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\StoreVisitTracker.Domain.AssemblyInfoInputs.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\StoreVisitTracker.Domain.AssemblyInfo.cs
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\StoreVisitTracker.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\StoreVisitTracker.Domain.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\refint\StoreVisitTracker.Domain.dll
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\StoreVisitTracker.Domain.pdb
+C:\Users\Kullanıcı\Desktop\StoreVisitTracker\StoreVisitTracker.Domain\obj\Debug\net8.0\ref\StoreVisitTracker.Domain.dll

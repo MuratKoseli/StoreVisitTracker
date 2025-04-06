@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ku0dpWxitlol6I7haw3IFrc93bXY0aqIEIZZM1s7ww0=",
+  "Source": "StoreVisitTracker.Api",
+  "BasePath": "_content/StoreVisitTracker.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

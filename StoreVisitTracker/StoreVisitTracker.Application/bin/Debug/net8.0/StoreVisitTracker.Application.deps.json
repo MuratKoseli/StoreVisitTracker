@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "StoreVisitTracker.Application/1.0.0": {
+        "dependencies": {
+          "StoreVisitTracker.Domain": "1.0.0"
+        },
+        "runtime": {
+          "StoreVisitTracker.Application.dll": {}
+        }
+      },
+      "StoreVisitTracker.Domain/1.0.0": {
+        "runtime": {
+          "StoreVisitTracker.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StoreVisitTracker.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StoreVisitTracker.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
