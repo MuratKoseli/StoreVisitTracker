@@ -13,7 +13,7 @@ namespace StoreVisitTracker.Infrastructure.Db
             public DbSet<User> Users => Set<User>();
             public DbSet<Store> Stores => Set<Store>();
             public DbSet<Visit> Visits => Set<Visit>();
-            public DbSet<Product> Products => Set<Product>();
+            public virtual DbSet<Product> Products => Set<Product>(); // Moq kütüphanesinin ovveride edebilmesi için virtual yaptık.
             public DbSet<Photo> Photos => Set<Photo>();
 
             protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oL+bKgWe3Mc=",
+  "dgSpecHash": "TIZ9vGsNXto=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Tests\\StoreVisitTracker.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Tests\\StoreVisitTracker.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kullanıcı\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Kullanıcı\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj",
       "projectName": "StoreVisitTracker.Domain",
-      "projectPath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj",
+      "projectPath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj",
       "packagesPath": "C:\\Users\\Kullanıcı\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

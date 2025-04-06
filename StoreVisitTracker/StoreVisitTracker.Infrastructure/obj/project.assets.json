@@ -2572,11 +2572,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\StoreVisitTracker.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\StoreVisitTracker.Infrastructure.csproj",
       "projectName": "StoreVisitTracker.Infrastructure",
-      "projectPath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\StoreVisitTracker.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\StoreVisitTracker.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Kullanıcı\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2598,8 +2598,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj": {
-              "projectPath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj"
+            "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj": {
+              "projectPath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Domain\\StoreVisitTracker.Domain.csproj"
             }
           }
         }

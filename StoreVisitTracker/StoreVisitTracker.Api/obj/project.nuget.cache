@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6v3TXMUl/LM=",
+  "dgSpecHash": "b4mI7lt6SXA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Api\\StoreVisitTracker.Api.csproj",
+  "projectFilePath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Api\\StoreVisitTracker.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kullanıcı\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Kullanıcı\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

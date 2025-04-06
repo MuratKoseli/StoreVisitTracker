@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e4++T450OhU=",
+  "dgSpecHash": "UikxmnWBGrc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kullanıcı\\Desktop\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\StoreVisitTracker.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Kullanıcı\\Documents\\GitHub\\StoreVisitTracker\\StoreVisitTracker\\StoreVisitTracker.Infrastructure\\StoreVisitTracker.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kullanıcı\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Kullanıcı\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
