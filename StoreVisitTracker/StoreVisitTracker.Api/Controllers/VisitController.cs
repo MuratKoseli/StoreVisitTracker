@@ -112,7 +112,7 @@ namespace StoreVisitTracker.Api.Controllers
 
 
 
-        // Kullanıcıya ait bir ziyareti tamamlanmış olarak işaretler.
+        
         [HttpPut("{id}/complete")]
         public async Task<IActionResult> CompleteVisit(int id)
         {

@@ -27,7 +27,7 @@ namespace StoreVisitTracker.Api.Tests.Controllers
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                 .Options;
 
-            // Test verileri veritabanına ekleniyor
+            
             using (var context = new AppDbContext(_dbContextOptions))
             {
                 context.Stores.AddRange(
@@ -40,7 +40,7 @@ namespace StoreVisitTracker.Api.Tests.Controllers
                 context.SaveChanges();
             }
 
-            // Mock cache oluşturuluyor
+            
             _mockCache = new Mock<IDistributedCache>();
 
             // Controller örneği oluşturuluyor (mock cache ve test context ile)
@@ -60,7 +60,7 @@ namespace StoreVisitTracker.Api.Tests.Controllers
         [Fact]
         public async Task GetStores_ReturnsCachedData_WhenCacheExists()
         {
-            // Arrange
+            
             var page = 1;
             var pageSize = 10;
             var cacheKey = $"stores_page_{page}_size_{pageSize}";
@@ -72,21 +72,21 @@ namespace StoreVisitTracker.Api.Tests.Controllers
                 new Store { Id = 2, Name = "Store 2", Location = "Location 2" }
             };
 
-            // Serialize edilip byte dizisine çevrilerek mock cache'e veriliyor
+            
             var serializedStores = JsonSerializer.Serialize(testStores);
             var cachedData = Encoding.UTF8.GetBytes(serializedStores);
 
-            // Mock cache'den veri döndürülüyor
+           
             _mockCache.Setup(x => x.GetAsync(cacheKey, default))
                 .ReturnsAsync(cachedData);
 
-            // Act
+            
             var result = await _controller.GetStores(page, pageSize);
 
-            // Assert
+            
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedStores = Assert.IsType<List<Store>>(okResult.Value);
-            Assert.Equal(2, returnedStores.Count); // Cache'teki veri sayısıyla eşleşmeli
+            Assert.Equal(2, returnedStores.Count); 
 
             _mockCache.Verify(x => x.GetAsync(cacheKey, default), Times.Once);
         }
@@ -94,15 +94,15 @@ namespace StoreVisitTracker.Api.Tests.Controllers
         [Fact]
         public async Task GetStores_ReturnsDatabaseData_WhenCacheDoesNotExist()
         {
-            // Arrange
+            
             var page = 1;
             var pageSize = 10;
             var cacheKey = $"stores_page_{page}_size_{pageSize}";
 
-            // Cache boş (null) olarak ayarlanıyor
+            
             _mockCache.Setup(x => x.GetAsync(cacheKey, default)).ReturnsAsync((byte[])null!);
 
-            // Cache'e veri yazımı bekleniyor
+            
             _mockCache.Setup(x => x.SetAsync(
                     cacheKey,
                     It.IsAny<byte[]>(),
@@ -110,20 +110,20 @@ namespace StoreVisitTracker.Api.Tests.Controllers
                     default))
                 .Returns(Task.CompletedTask);
 
-            // Act
+           
             var result = await _controller.GetStores(page, pageSize);
 
-            // Assert
+            
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedStores = Assert.IsType<List<Store>>(okResult.Value);
-            Assert.Equal(5, returnedStores.Count); // Tüm veritabanı kayıtları gelmeli
+            Assert.Equal(5, returnedStores.Count); 
 
             _mockCache.Verify(x => x.GetAsync(cacheKey, default), Times.Once);
             _mockCache.Verify(x => x.SetAsync(
                 cacheKey,
                 It.IsAny<byte[]>(),
                 It.Is<DistributedCacheEntryOptions>(o => o.AbsoluteExpirationRelativeToNow == TimeSpan.FromMinutes(5)),
-                default), Times.Once); // Cache'e yazıldığından emin olunuyor
+                default), Times.Once); 
         }
 
         [Fact]
@@ -136,27 +136,27 @@ namespace StoreVisitTracker.Api.Tests.Controllers
 
             _mockCache.Setup(x => x.GetAsync(cacheKey, default)).ReturnsAsync((byte[])null!);
 
-            // Act
+            
             var result = await _controller.GetStores(page, pageSize);
 
-            // Assert
+            
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedStores = Assert.IsType<List<Store>>(okResult.Value);
             Assert.Equal(2, returnedStores.Count);
-            Assert.Equal(3, returnedStores[0].Id); // 2. sayfanın ilk kaydı
-            Assert.Equal(4, returnedStores[1].Id); // 2. sayfanın ikinci kaydı
+            Assert.Equal(3, returnedStores[0].Id); 
+            Assert.Equal(4, returnedStores[1].Id); 
         }
 
         [Fact]
         public async Task CreateStore_AddsNewStore_WhenUserIsAdmin()
         {
-            // Arrange
+          
             var newStore = new Store { Name = "New Store", Location = "New Location" };
 
-            // Act
+            
             var result = await _controller.CreateStore(newStore);
 
-            // Assert
+           
             var createdAtActionResult = Assert.IsType<CreatedAtActionResult>(result);
             var returnedStore = Assert.IsType<Store>(createdAtActionResult.Value);
             Assert.Equal("New Store", returnedStore.Name);
@@ -173,20 +173,20 @@ namespace StoreVisitTracker.Api.Tests.Controllers
         [Fact]
         public async Task UpdateStore_UpdatesExistingStore_WhenUserIsAdmin()
         {
-            // Arrange
+            
             var updatedStore = new Store { Name = "Updated Store", Location = "Updated Location" };
             var storeId = 1;
 
-            // Act
+            
             var result = await _controller.UpdateStore(storeId, updatedStore);
 
-            // Assert
+           
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedStore = Assert.IsType<Store>(okResult.Value);
             Assert.Equal("Updated Store", returnedStore.Name);
             Assert.Equal("Updated Location", returnedStore.Location);
 
-            // DB'de gerçekten güncellendi mi kontrolü
+            
             using (var context = new AppDbContext(_dbContextOptions))
             {
                 var storeInDb = await context.Stores.FindAsync(storeId);
@@ -198,30 +198,30 @@ namespace StoreVisitTracker.Api.Tests.Controllers
         [Fact]
         public async Task UpdateStore_ReturnsNotFound_WhenStoreDoesNotExist()
         {
-            // Arrange
+            
             var updatedStore = new Store { Name = "Updated Store", Location = "Updated Location" };
             var nonExistentStoreId = 999;
 
-            // Act
+           
             var result = await _controller.UpdateStore(nonExistentStoreId, updatedStore);
 
-            // Assert
+            
             Assert.IsType<NotFoundResult>(result);
         }
 
         [Fact]
         public async Task DeleteStore_RemovesStore_WhenUserIsAdmin()
         {
-            // Arrange
+         
             var storeId = 1;
 
-            // Act
+            
             var result = await _controller.DeleteStore(storeId);
 
-            // Assert
+            
             Assert.IsType<NoContentResult>(result);
 
-            // Veritabanında silinmiş mi kontrolü
+            
             using (var context = new AppDbContext(_dbContextOptions))
             {
                 var storeInDb = await context.Stores.FindAsync(storeId);
@@ -232,13 +232,13 @@ namespace StoreVisitTracker.Api.Tests.Controllers
         [Fact]
         public async Task DeleteStore_ReturnsNotFound_WhenStoreDoesNotExist()
         {
-            // Arrange
+        
             var nonExistentStoreId = 999;
 
-            // Act
+            
             var result = await _controller.DeleteStore(nonExistentStoreId);
 
-            // Assert
+            
             Assert.IsType<NotFoundResult>(result);
         }
     }

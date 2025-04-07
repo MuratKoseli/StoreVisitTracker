@@ -22,7 +22,7 @@ namespace StoreVisitTracker.Infrastructure.Db
                   // Date Time özellikleri Entity'ler üzerinden C# tarafından tanımlandı. Çünkü MySQL'de datetime(6) sorun çıkartıyor.
 
 
-                  // User Entity için
+                  
                   modelBuilder.Entity<User>(entity =>
                   {
                         entity.HasKey(e => e.Id);
@@ -34,7 +34,7 @@ namespace StoreVisitTracker.Infrastructure.Db
                         .IsRequired();
                   });
 
-                  // Store Entity için
+                  
                   modelBuilder.Entity<Store>(entity =>
                   {
                         entity.HasKey(e => e.Id);
@@ -44,7 +44,7 @@ namespace StoreVisitTracker.Infrastructure.Db
 
                   });
 
-                  // Visit Entity için
+                  
                   modelBuilder.Entity<Visit>(entity =>
                   {
                         entity.HasKey(e => e.Id);
@@ -61,7 +61,7 @@ namespace StoreVisitTracker.Infrastructure.Db
                         .OnDelete(DeleteBehavior.Cascade);
                   });
 
-                  // Product Entity için
+                
                   modelBuilder.Entity<Product>(entity =>
                   {
                         entity.HasKey(e => e.Id);
@@ -70,7 +70,7 @@ namespace StoreVisitTracker.Infrastructure.Db
                         entity.Property(e => e.Category).HasMaxLength(100);
                   });
 
-                  // Photo Entity için
+                  
                   modelBuilder.Entity<Photo>(entity =>
                   {
                         entity.HasKey(e => e.Id);

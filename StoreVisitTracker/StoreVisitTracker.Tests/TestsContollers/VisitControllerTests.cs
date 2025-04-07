@@ -35,7 +35,7 @@ namespace StoreVisitTracker.Tests.Controllers
         [Fact]
         public async Task CreateVisit_ShouldCreateNewVisit_WhenValidRequest()
         {
-            // Arrange
+            
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                 .Options;
@@ -52,10 +52,10 @@ namespace StoreVisitTracker.Tests.Controllers
                 StoreId = 1
             };
 
-            // Act
+            
             var result = await controller.CreateVisit(request);
 
-            // Assert
+            
             var okResult = Assert.IsType<OkObjectResult>(result);
             var visit = Assert.IsType<Visit>(okResult.Value);
             Assert.Equal(99, visit.UserId);
@@ -66,7 +66,7 @@ namespace StoreVisitTracker.Tests.Controllers
         [Fact]
         public async Task CompleteVisit_ShouldUpdateVisitStatusToCompleted()
         {
-            // Arrange
+            
             var dbName = Guid.NewGuid().ToString();
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: dbName)
@@ -106,10 +106,10 @@ namespace StoreVisitTracker.Tests.Controllers
                     }
                 };
 
-                // Act
+                
                 var result = await controller.CompleteVisit(1);
 
-                // Assert
+                
                 var updatedVisit = await context.Visits.FindAsync(1);
                 Assert.Equal(VisitStatus.Completed, updatedVisit!.Status);
             }
@@ -118,7 +118,7 @@ namespace StoreVisitTracker.Tests.Controllers
         [Fact]
         public async Task GetAllVisits_ShouldReturnOnlyUserVisits_ForStandardUser()
         {
-            // Arrange
+            
             var dbName = Guid.NewGuid().ToString();
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: dbName)
@@ -158,26 +158,26 @@ namespace StoreVisitTracker.Tests.Controllers
                     }
                 };
 
-                // Act
+               
                 var result = await controller.GetAllVisits();
 
-                // Assert
+                
                 var okResult = Assert.IsType<OkObjectResult>(result);
                 var response = okResult.Value!;
 
-                // Convert anonymous object using reflection
+               
                 var visitsProp = response.GetType().GetProperty("Visits");
                 var visits = visitsProp?.GetValue(response) as IEnumerable<object>;
 
                 Assert.NotNull(visits);
-                Assert.Single(visits); // Sadece user1'e ait 1 ziyaret dönmeli
+                Assert.Single(visits); 
             }
         }
 
         [Fact]
         public async Task GetAllVisits_ShouldReturnAllVisits_ForAdminUser()
         {
-            // Arrange
+         
             var dbName = Guid.NewGuid().ToString();
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: dbName)
@@ -217,24 +217,24 @@ namespace StoreVisitTracker.Tests.Controllers
                     }
                 };
 
-                // Act
+               
                 var result = await controller.GetAllVisits();
 
-                // Assert
+               
                 var okResult = Assert.IsType<OkObjectResult>(result);
 
                 var json = JsonSerializer.Serialize(okResult.Value);
                 using var doc = JsonDocument.Parse(json);
                 var visits = doc.RootElement.GetProperty("Visits").EnumerateArray();
 
-                Assert.Equal(2, visits.Count()); // Admin tüm ziyaretleri görmeli
+                Assert.Equal(2, visits.Count()); 
             }
         }
 
         [Fact]
         public async Task CreateVisit_ShouldAddNewVisit_ForAuthenticatedUser()
         {
-            // Arrange
+            
             var dbName = Guid.NewGuid().ToString();
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: dbName)
@@ -270,10 +270,10 @@ namespace StoreVisitTracker.Tests.Controllers
                     }
                 };
 
-                // Act
+                
                 var result = await controller.CreateVisit(request);
 
-                // Assert
+              
                 var okResult = Assert.IsType<OkObjectResult>(result);
                 var visit = Assert.IsType<Visit>(okResult.Value);
                 Assert.Equal(1, visit.UserId);
@@ -325,10 +325,10 @@ namespace StoreVisitTracker.Tests.Controllers
                     }
                 };
 
-                // Act
+              
                 var result = await controller.CompleteVisit(1);
 
-                // Assert
+                
                 var okResult = Assert.IsType<OkObjectResult>(result);
                 Assert.Equal("Ziyaret başarıyla tamamlandı.", okResult.Value);
 

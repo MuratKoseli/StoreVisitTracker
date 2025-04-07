@@ -23,12 +23,12 @@ namespace StoreVisitTracker.Api.Tests.Controllers
 
         public ProductsControllerTests()
         {
-            // Her test için benzersiz bir InMemory database oluşturuyoruz
+            
             _dbContextOptions = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
                 .Options;
 
-            // Veritabanına örnek ürünler ekliyoruz
+            
             using (var context = new AppDbContext(_dbContextOptions))
             {
                 context.Products.AddRange(
@@ -41,15 +41,15 @@ namespace StoreVisitTracker.Api.Tests.Controllers
                 context.SaveChanges();
             }
 
-            // Cache mock’unu oluşturuyor
+            
             _mockCache = new Mock<IDistributedCache>();
 
-            // Controller örneğini oluşturuyor
+            
             var contextForController = new AppDbContext(_dbContextOptions);
             _controller = new ProductsController(contextForController, _mockCache.Object);
         }
 
-        // Test sonunda veritabanını temizliyor
+        
         public void Dispose()
         {
             using (var context = new AppDbContext(_dbContextOptions))
@@ -75,19 +75,19 @@ namespace StoreVisitTracker.Api.Tests.Controllers
             var serializedProducts = JsonSerializer.Serialize(testProducts);
             var cachedData = Encoding.UTF8.GetBytes(serializedProducts);
 
-            // Cache’den verinin geldiğini simüle ediyor
+           
             _mockCache.Setup(x => x.GetAsync(cacheKey, default))
                 .ReturnsAsync(cachedData);
 
-            // Controller üzerinden GetAll çağrısını yapıyor
+           
             var result = await _controller.GetAll(page, pageSize);
 
-            // Sonuçların doğru türde ve sayıda geldiğini kontrol ediyor
+            
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedProducts = Assert.IsType<List<Product>>(okResult.Value);
             Assert.Equal(2, returnedProducts.Count);
 
-            // Cache'in gerçekten çağrıldığını kontrol ediyor
+            
             _mockCache.Verify(x => x.GetAsync(cacheKey, default), Times.Once);
         }
 
@@ -112,9 +112,9 @@ namespace StoreVisitTracker.Api.Tests.Controllers
 
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedProducts = Assert.IsType<List<Product>>(okResult.Value);
-            Assert.Equal(5, returnedProducts.Count); // 5 ürün vardı, hepsi dönmeli
+            Assert.Equal(5, returnedProducts.Count); 
 
-            // Cache get ve set işlemlerinin çağrıldığını doğruluyor
+            
             _mockCache.Verify(x => x.GetAsync(cacheKey, default), Times.Once);
             _mockCache.Verify(x => x.SetAsync(
                 cacheKey,
@@ -139,8 +139,8 @@ namespace StoreVisitTracker.Api.Tests.Controllers
             var returnedProducts = Assert.IsType<List<Product>>(okResult.Value);
 
             Assert.Equal(2, returnedProducts.Count);
-            Assert.Equal(3, returnedProducts[0].Id); // 2. sayfa 1. ürün
-            Assert.Equal(4, returnedProducts[1].Id); // 2. sayfa 2. ürün
+            Assert.Equal(3, returnedProducts[0].Id); 
+            Assert.Equal(4, returnedProducts[1].Id); 
         }
 
         [Fact]

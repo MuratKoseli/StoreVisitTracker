@@ -29,7 +29,6 @@ namespace StoreVisitTracker.Api.Controllers
         // Redis ile cach işlemi yaparak performans artışı sağladık. Bu şekilde her sayfa için farklı cache key kullanılıyor.
         [HttpGet]
         [Authorize]
-        // [AllowAnonymous]
         public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             string cacheKey = $"products_page_{page}_size_{pageSize}";

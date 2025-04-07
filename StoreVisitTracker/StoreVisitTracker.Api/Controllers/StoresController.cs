@@ -26,8 +26,6 @@ namespace StoreVisitTracker.Api.Controllers
             _cache = cache;
         }
 
-        // Tüm mağazaları listeleme işlemleri.
-        // Giriş yapan herkes erişebilir!!
         // Redis ile cach işmei yaparak performans artışı sağladık.
         [HttpGet]
         [Authorize]
@@ -59,7 +57,7 @@ namespace StoreVisitTracker.Api.Controllers
         }
 
 
-        // Yeni mağaza ekleme işlemi (Sadece Admin)
+       
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateStore([FromBody] Store store)
@@ -71,7 +69,7 @@ namespace StoreVisitTracker.Api.Controllers
         }
 
 
-        // Mağaza güncelleme işlemi (Sadece Admin)
+        
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateStore(int id, [FromBody] Store updatedStore)
@@ -90,7 +88,7 @@ namespace StoreVisitTracker.Api.Controllers
 
 
 
-        // Mağaza silme işlemi (Sadece Admin)
+     
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteStore(int id)

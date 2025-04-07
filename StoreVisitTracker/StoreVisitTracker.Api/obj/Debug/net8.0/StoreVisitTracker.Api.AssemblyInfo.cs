@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StoreVisitTracker.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05d3539762ddc33f403d992834b4115197e0c2f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09e476fc1b834c09719f49ee4f64f57d6af9ea50")]
 [assembly: System.Reflection.AssemblyProductAttribute("StoreVisitTracker.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StoreVisitTracker.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

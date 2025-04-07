@@ -14,7 +14,7 @@ public class PhotoControllerTests
     [Fact]
     public async Task UploadPhoto_ShouldReturnOk_WhenVisitBelongsToUser()
     {
-        // Arrange
+       
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseInMemoryDatabase(databaseName: "PhotoUploadTestDb")
             .Options;
@@ -49,10 +49,10 @@ public class PhotoControllerTests
             Base64Image = "R0lGODlhAQABAIAAAAUEBA=="
         };
 
-        // Act
+       
         var result = await controller.UploadPhoto(request);
 
-        // Assert
+        
         var okResult = Assert.IsType<OkObjectResult>(result);
         var photo = Assert.IsType<Photo>(okResult.Value);
         Assert.Equal(request.VisitId, photo.VisitId);
